@@ -21,4 +21,9 @@ public class Truck extends Vehicle implements Refuelable {
         public void refuel(double liters){
             fuelLevel = Math.max(tankCapacity, fuelLevel + liters);
         }
+
+    @Override
+    public double getFuelLevel() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     }
