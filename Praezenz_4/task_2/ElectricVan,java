@@ -1,0 +1,22 @@
+public class EVan extends Vehicle implements Electrified {
+// TODO: add attributes , constants and implement required methods
+double batteryLevel
+public EVan(String id, double maxLoad, double batteryCapacity) {
+super(id, maxLoad);
+// TODO: initialise attributes
+this.batteryLevel = batteryCapacity;
+}
+// TODO: implement Vehicle + Electrified method
+@Override
+public double getRange(){
+    return fuelLevel/0.25;
+}
+@Override 
+public double fuelNeeded(double distance){
+    return distance * 0.25;
+}
+@Override 
+public void refuel(double liters){
+    fuelLevel = Math.max(tankCapacity, fuelLevel + liters);
+}
+}
